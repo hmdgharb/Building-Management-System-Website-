@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+	<meta charset="utf-8"> 
+    <title>مدیریت ساختمان</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	 <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	</style>
+
+    </head>
+    <body style="background:#CCD6F5; background:url('/assets/1.jpg')">
+
+        <div class="container" >
+        
+        <div class="navbar navbar-fixed-top-right">
+          <div class="navbar-inner">
+            <div class="container myRight">
+                <class="brand myRight myWidth25"><%= link_to("ورود", :action => 'signin', :controller => 'usr') %> 
+                <class="brand myRight myWidth25"><%= link_to("ثبت نام", :action => 'signupAdmin', :controller => 'usr') %> 
+            </div><!-- /.container -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	<div class="row">
+         <div class="span6 well" style="background: #E6EAFA ;">
+             <h3 class="text-center">ارتباط مستمر</h3>
+			 <p class="text-right"> با استفاده از این سیستم امور ساختمان به سادگی اطلاع رسانی شده و مدیریت با ساکنین و ساکنین با به سهولت می توانند تبادل نظر کنند</p>
+			 <p class="text-right">مسنت منتیس ب منستی ب منس ب ثصبقص منت صث صث نتم صثق منصت ثصق من صثق مصتث ق مصثنت قصث مثصنتق صمثن قمصنث ق منصتثق  منثصت منصثصقث منتث قمنص ثقثص قمنص تثمن ص</p></br></br></br>
+         </div>
+		
+		 <div class="span5 well pull-right" style="background: #E6EAFA ;">
+    <div class="form-signin pull-right">
+
+        <%= form_for(:usr, :url => {:action => 'create' } ) do |f| %>
+                <%= render(:partial => "signupAdminForm", :locals => {:f => f}, :class => "text-right pull-right ") %>
+                 <%= submit_tag("ذخیره", :class => "btn btn-primary pull-right" ) %>
+                <% end %>
+    </div>
+  </div>
+</div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    </body>
+    </html>

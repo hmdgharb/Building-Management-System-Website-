@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IE</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag 'bootstrap', 'bootstrap-responsive', 'bootstrap-responsive.min', 'bootstrap.min', 'my', 'grid', 'ie', 'reset', 'style' %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'bootstrap', 'bootstrap.min' %>
+        <meta charset="utf-8">
+    <title>مدیریت ساختمان</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+         <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        </style>
+
+
+</head>
+<body>
+
+<%= yield %>
+
+  <%= javascript_include_tag 'bootstrap', 'bootstrap.min', 'menu', 'jquery-2.1.0'  %>
+  <%= javascript_include_tag 'jquery', 'cufon-replace', 'cufon-yui', 'FF-cash', 'html5', 'jquery-1.6.3.min', 'jquery.featureCarousel' %>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="grid.css" type="text/css" media="screen"> 
+	 <link href="bootstrap.css" rel="stylesheet" media="screen">
+    </script>
+	
+</head>
+<body id="page1">
+	<div>
+    	<!--==============================header=================================-->
+       <header>
+        <div class="container">
+        </br>
+
+
+
+
+       <div class="navbar navbar-fixed-top-right">
+                  <div class="navbar-inner">
+                    <div class="container myRight">
+                        <a><img src="/assets/exit.png" ><%= link_to("خروج", :controller => 'usr', :action => 'signout') %></a>
+                        <a><img src="/assets/setting.png" ><%= link_to("ویرایش", :controller => 'usr', :action => 'householdEdit') %></a>
+                  </div><!-- /.navbar-inner -->
+                </div><!-- /.navbar -->
+
+        </div>    
+        </header>
+        
+        <!--==============================content================================-->
+	
+
+	<%= javascript_include_tag "jquery" %>
+	<%= javascript_include_tag "jquery.featureCarousel" %>
+
+ <div class="row" style="margin: 0px 148px 10px;">
+                
+			<div class="span8 ">
+				<h3 class="text-center">پیغام های دریافت شده</h3>
+				<table
+					class="table table-striped table-bordered table-condensed  table-responsive pull-right text-center">
+					<thead>
+						<tr>
+
+							<th width="30" style="text-align: center;">#</th>
+							<th width="100" style="text-align: center;">تاریخ</th>
+							<th width="300" style="text-align: center;">موضوع</th>
+							<th style="text-align: center;">فرستنده</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+					<% @counter = 0 %>
+						<% @recievedMsgs.each do |myRecived| %>
+                				<% @counter = @counter + 1 %>
+						<tr class="success">
+							<td><%= @counter %></td>
+							<td></td>
+							<% @hello = myRecived.subject %>
+							<td style="padding: 10px 50px 10px 0;"><%= link_to( @hello, :action => 'usrViewMsg', :controller => 'msg', :id => myRecived.id) %></td>
+							<td><%= myRecived.sender_email %></td>
+						</tr>
+						<% end %>
+					</tbody>
+				</table>
+
+				<h3 class="text-center">پیغام های ارسال شده</h3>
+				<table
+					class="table table-striped table-bordered table-condensed  table-responsive pull-right text-center">
+					<thead>
+						<tr>
+
+							<th width="30" style="text-align: center;">#</th>
+							<th width="100" style="text-align: center;">تاریخ</th>
+							<th width="300" style="text-align: center;">موضوع</th>
+							<th style="text-align: center;">گیرنده</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+					<% @counter = 0 %>
+						<% @sendedMsgs.each do |mySended| %>
+                				<% @counter = @counter + 1 %>
+						<tr class="success">
+							<td><%= @counter %></td>
+							<td></td>
+							<% @hello = mySended.subject %>
+							<td style="padding: 10px 50px 10px 0;"><%= link_to( @hello, :action => 'usrViewMsg', :controller => 'msg', :id => mySended.id) %></td>
+							<td><%= mySended.recipient_email %></td>
+						</tr>
+						<% end %>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		<div class="accordion span4" id="leftMenu">
+                                <div class="accordion-heading">
+
+                                                              <li> <img src="/assets/home.png" ><%= link_to("   صفحه اصلی ساکن", :controller => 'usr', :action => 'household') %></li>
+
+                                </div>
+                                <div class="accordion-heading">
+
+                                                              <li> <img src="/assets/message.png" ><%= link_to(" مدیریت پیغامها ", :controller => 'msg', :action => 'usrMessageManagement') %></li>
+
+                                </div>
+                                                      <ul>
+                                                               <li> <%= link_to("       ارسال پیغام جدید", :controller => 'msg', :action => 'usrSendNewMsg') %></li>
+                                                                <li> <%= link_to("      مشاهده پیغامها", :controller => 'msg', :action => 'usrSeeMsgList') %></li>
+                                                        </ul>
+                                <div class="accordion-heading">
+
+                                                              <li> <img src="/assets/charge.png" ><%= link_to("مدیریت شارژ", :controller => 'usr', :action => 'household') %></li>
+
+                                </div>
+                                                        <ul>
+                                                <div class="brand">
+                                                        <li><%= link_to("پرداخت شارژ", :controller => 'charge', :action => 'usrChargeView') %></li>
+                                                </div>
+                                                        <li><%= link_to("مشاهده رسیدها", :controller => 'recipt', :action => 'usrReciptVeiw') %></li>
+                                                        </ul>
+                        </div>
+                </div>
+        </div>
+
+</div>
+
+	
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery.featureCarousel.js" type="text/javascript"></script>     
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#carousel").featureCarousel({
+			autoPlay:7000,
+			trackerIndividual:false,
+			trackerSummation:false,
+			topPadding:50,
+			smallFeatureWidth:.9,
+			smallFeatureHeight:.9,
+			sidePadding:0,
+			smallFeatureOffset:0
+		});
+      });
+    </script>
+	<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

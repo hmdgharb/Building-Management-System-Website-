@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  billType: MyString
+  name: MyString
+  amount: MyString
+  description: MyString
+
+two:
+  billType: MyString
+  name: MyString
+  amount: MyString
+  description: MyString

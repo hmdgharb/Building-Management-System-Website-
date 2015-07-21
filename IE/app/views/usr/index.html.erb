@@ -1,0 +1,40 @@
+<% @page_title = "Pages" %>
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<div class="pages index">
+  <h2>Pages</h2>
+
+  <%= link_to("Add New Usr", {:action => 'signup'}, :class => 'action signup') %>
+
+  <table class="listing" summary="Usr list">
+    <tr class="header">
+ 
+      <th>usageType</th>
+      <th>firstName</th>
+      <th>sureName</th>
+      <th>telephone_Number</th>
+      <th>email</th>
+      <th>building number</th>
+      <th>encrypted_password</th>
+    </tr>
+    <% @usrs.each do |usr| %>
+    <tr>
+      <td><%= usr.usageType %></td>
+      <td><%= usr.firstN %></td>
+      <td><%= usr.sureN %></td>
+      <td><%= usr.telNum %></td>
+      <td><%= usr.email %></td>
+      <td><%= usr.buildingNum %></td>
+      <td><%= usr.password_digest %></td>
+
+      <td class="actions">
+        <%= link_to("Edit", {:action => 'edit', :id => usr.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => usr.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

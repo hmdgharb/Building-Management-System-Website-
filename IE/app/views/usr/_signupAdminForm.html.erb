@@ -1,0 +1,35 @@
+<table summary="signin form fields pull-right">
+  <tr>
+<th > <% f.label(:usageType, "استفاده", :class => "pull-right") %> </th>
+<td> <%= f.select :usageType, options_for_select([ "مدیر"  ], "مدیر") %></td>
+  </tr>
+  <tr>
+    <th><% f.label(:firstN, "نام", :class => "pull-right") %></th>
+    <td><%= f.text_field(:firstN, :placeholder => "نام") %></td>
+  </tr>
+  <tr>
+    <th><% f.label(:sureN, "نام خانوادگی") %></th>
+    <td><%= f.text_field(:sureN, :placeholder => "نام خانوادگی") %></td>
+  </tr>
+  <tr>
+    <th><% f.label(:telNum, "شماره تلفن") %></th>
+    <td><%= f.text_field(:telNum, :placeholder => "شماره تلفن") %></td>
+  </tr>
+  <tr>
+    <th><% f.label(:email, "ایمیل") %></th>
+    <td><%= f.email_field(:email, :placeholder => "ایمیل") %></td>
+  </tr>
+  <tr>
+    <th><% f.label(:password, "رمز ورود") %></th>
+    <td><%= f.password_field(:password, :placeholder => "رمز ورود") %></td>
+  </tr>
+  <tr>
+    <th><% f.label(:password_confirmation, "تکرار رمز") %></th>
+    <td><%= f.password_field(:password_confirmation, :placeholder => "تکرار رمز") %></td>
+  </tr>
+  <tr>
+    <th><% f.label(:buildingNum, "شماره ساختمان") %></th>
+    <td><%= f.text_field(:buildingNum, :placeholder => "شماره ساختمان") %></td>
+  </tr>
+</table>
+

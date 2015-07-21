@@ -1,0 +1,13 @@
+<% f.label(:subject ) %>
+<%= f.text_field(:subject, :placeholder => "عنوان", :class => "pull-right") %>
+</br>
+<% f.label(:recipient_email) %>
+<%= f.email_field(:recipient_email, :placeholder => "ایمیل گیرنده", :class=>"pull-right") %>
+</br>
+<% f.label(:body) %>
+<%= f.text_area(:body, :placeholder => "متن" , :class=>"pull-right") %>
+</br>
+<%= f.hidden_field(:sender_id, :value => session[:usr_id]) %>
+<%= f.hidden_field(:sender_buildingNum, :value => session[:usr_buildingNum]) %>
+<% @l = Usr.find_by_email(f.email_field.value).id
+<%= f.hidden_field(:recipient_buildingNum, :value => @l) %>

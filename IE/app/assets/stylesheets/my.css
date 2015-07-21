@@ -1,0 +1,69 @@
+.myRight{
+	float: right;
+}
+.myLeft{
+	float: Left;
+}
+.myMiddle{
+	margin: 1px auto;
+	padding: 10px;
+	height: auto;
+	width: 800px;	
+}
+.myNoMargin{
+	margin: 0;
+}
+.myNoPadding{
+	padding: 0;
+}
+.myWidth10P{
+	width: 10px;
+}
+.myWidth25{
+	width: 25%;
+}
+.myWidth50{
+	width: 50%;
+}
+.myWidth60{
+	width: 60%;
+}
+.myWidth70{
+	width: 70%;
+}
+.myWidth75{
+	width: 75%;
+}
+.myWidth90{
+	width: 90%;
+}
+.myHeight10{
+	height: 10px;
+}
+.myPadding10{
+	padding: 10px;
+}
+.myPadding20{
+	padding: 20px;
+}
+.myMargin10{
+	margin: 10px;
+}
+.myBlue{
+	background: #99AAFF;
+}
+
+.myCenter{
+	text-align: center;
+}
+.myMenu{
+	width: 25%;
+	text-align: right;
+	padding: 5px;
+}
+
+.myBuildingBoard{
+	width: 50%;
+	text-align: right;
+	padding: 5px;
+}

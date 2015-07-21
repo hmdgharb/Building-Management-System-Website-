@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chargeDate: MyString
+  amount: MyString
+  chargeDescription: MyString
+
+two:
+  chargeDate: MyString
+  amount: MyString
+  chargeDescription: MyString

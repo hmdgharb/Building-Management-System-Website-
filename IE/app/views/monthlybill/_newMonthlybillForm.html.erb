@@ -1,0 +1,13 @@
+<% f.label(:month, "ماه", :class=>"pull-right") %>
+<%= f.month_field(:month, :placeholder => "ماه") %>
+</br>
+<% f.label(:year, "سال" , :class=>"pull-right")%>
+<%= f.number_field(:year, :placeholder =>"سال") %>
+</br>
+<% f.label(:totalCash, "موجودی صندق" , :class=>"pull-right")%>
+<%= f.number_field(:totalCash, :placeholder =>"موجودی صندق") %>
+<%= f.hidden_field(:usr_id, :value => session[:usr_id]) %>
+<%= f.hidden_field(:usr_buildingNum, :value => session[:usr_buildingNum]) %>
+<%= f.hidden_field(:totalInnerBills, :value => "0") %>
+<%= f.hidden_field(:totalAmount, :value => "0") %>
+</br>

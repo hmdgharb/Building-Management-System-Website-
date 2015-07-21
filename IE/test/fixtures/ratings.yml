@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comment_id: MyString
+  clicker_id: MyString
+  buildingNum_id: MyString
+
+two:
+  comment_id: MyString
+  clicker_id: MyString
+  buildingNum_id: MyString

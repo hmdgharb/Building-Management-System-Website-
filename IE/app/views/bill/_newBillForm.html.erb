@@ -1,0 +1,12 @@
+<% f.label(:billType, "نوع", :class => "pull-right") %> </th>
+<%= f.select :billType, options_for_select([ "آب", "برق", "گاز", "خدمات", "متفرقه" ], "آب") %></td>
+</br>
+<% f.label(:name,  ":(عنوان اختیاری) ", :class=>"pull-right")%>
+<%= f.text_field(:name, :placeholder => "(عنوان اختیاری) ") %>
+</br>
+<% f.label(:amount, "مقدار" , :class=>"pull-right")%>
+<%= f.number_field(:amount, :placeholder => "مقدار") %>
+</br>
+<% f.label(:amount, "توضیحات" , :class=>"pull-right")%>
+<%= f.text_area(:description, :placeholder => "توضیحات") %>
+</br>

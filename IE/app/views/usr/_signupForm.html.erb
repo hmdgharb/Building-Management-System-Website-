@@ -1,0 +1,27 @@
+<% f.label(:usageType, "استفاده") %> </th>
+<%= f.select :usageType, options_for_select([ "مدیر", "کاربر" ], "کاربر") %>
+</br>
+<% f.label(:firstN ) %>
+<%= f.text_field(:firstN, :placeholder => "نام", :class => "pull-right") %>
+</br>
+<% f.label(:sureN) %>
+<%= f.text_field(:sureN, :placeholder => "نام خانوادگی" , :class=>"pull-right") %>
+</br>
+<% f.label(:telNum) %>
+<%= f.text_field(:telNum, :placeholder => "شماره تلفن", :class=>"pull-right") %>
+</br>
+<% f.label(:familyNum) %>
+<%= f.number_field(:familyNum, :placeholder => "تعداد اعضا خانواده", :class=>"pull-right") %>
+</br>
+<% f.label(:email) %>
+<%= f.email_field(:email, :placeholder => "ایمیل", :class=>"pull-right") %>
+</br>
+<% f.label(:password) %>
+<%= f.password_field(:password, :placeholder => "رمز ورود", :class=>"pull-right") %>
+</br>
+<% f.label(:password_confirmation) %>
+<%= f.password_field(:password_confirmation, :placeholder => "تکرار رمز", :class=>"pull-right") %>
+</br>
+<%= f.hidden_field(:buildingNum, :value => session[:usr_buildingNum]) %>
+<%= f.hidden_field(:cash, :value => 0) %>
+</br>
